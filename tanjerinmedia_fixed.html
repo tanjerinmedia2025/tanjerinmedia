@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanjerin Media - Creative Agency</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF9F1C',secondary:'#FFD700'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #121212;
+color: #ffffff;
+}
+.hero-section {
+background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.6)), url('https://readdy.ai/api/search-image?query=cinematic%20film%20production%20studio%20with%20camera%20equipment%2C%20professional%20lighting%20setup%2C%20dark%20moody%20atmosphere%20with%20subtle%20orange%20highlights%2C%20film%20reels%2C%20creative%20workspace%2C%20high-end%20production%20environment%2C%20artistic%20and%20professional%20setting&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.playfair {
+font-family: 'Playfair Display', serif;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #FF9F1C;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+.service-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 25px -5px rgba(255, 159, 28, 0.1), 0 10px 10px -5px rgba(255, 159, 28, 0.04);
+}
+.service-icon {
+transition: transform 0.3s ease, color 0.3s ease;
+}
+.service-card:hover .service-icon {
+transform: scale(1.1);
+color: #FF9F1C;
+}
+input, textarea {
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus, textarea:focus {
+border-color: #FF9F1C;
+box-shadow: 0 0 0 2px rgba(255, 159, 28, 0.2);
+outline: none;
+}
+.btn-primary {
+background-color: #FF9F1C;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+background-color: #e88f10;
+transform: translateY(-2px);
+}
+.social-icon {
+transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+.social-icon:hover {
+transform: translateY(-3px);
+color: #FF9F1C;
+background-color: rgba(255, 255, 255, 0.1);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+background-color: rgba(255, 255, 255, 0.1);
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #FF9F1C;
+border-color: #FF9F1C;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 6px;
+height: 11px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<!-- Navigation -->
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent px-6 py-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-3xl font-bold text-white">
+      <span class="text-primary">Tanjerin</span>
+      <span class="text-sm tracking-widest ml-1">MEDIA</span>
+    </div>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="nav-link text-white hover:text-primary">Home</a>
+      <a href="#about" class="nav-link text-white hover:text-primary">About Us</a>
+      <a href="#services" class="nav-link text-white hover:text-primary">Our Services</a>
+      <a href="#contact" class="nav-link text-white hover:text-primary">Contact</a>
+    </div>
+
+    <!-- Mobile Toggle Button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="text-white text-2xl">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden mt-4 px-6 py-4 space-y-2 bg-[#FFA726] rounded shadow-lg">
+  <a href="#home" class="block text-black font-semibold hover:text-white">Home</a>
+  <a href="#about" class="block text-black font-semibold hover:text-white">About Us</a>
+  <a href="#services" class="block text-black font-semibold hover:text-white">Our Services</a>
+  <a href="#contact" class="block text-black font-semibold hover:text-white">Contact</a>
+</div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="home" class="hero-section min-h-screen flex items-center">
+<div class="container mx-auto px-6 py-20">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-10 md:mb-0">
+<h1 class="text-4xl md:text-6xl font-bold mb-6 playfair leading-tight">
+Visual <span class="text-primary">Storytelling </span>That Elevates Your Brand
+</h1>
+<p class="text-lg text-gray-300 mb-8 max-w-lg">
+We help businesses stand out through impactful storytelling and creative media solutions. From video editing to website design, our team brings your vision to life with cinematic quality and digital precision.
+</p>
+
+</div>
+<div class="md:w-1/2 flex justify-center">
+<div class="relative">
+<div class="w-16 h-16 absolute -top-8 -left-8 border-t-2 border-l-2 border-primary"></div>
+<div class="w-16 h-16 absolute -bottom-8 -right-8 border-b-2 border-r-2 border-primary"></div>
+<img src="https://readdy.ai/api/search-image?query=professional%20video%20production%20team%20filming%20with%20high-end%20camera%20equipment%2C%20cinematic%20lighting%20setup%2C%20creative%20directors%20discussing%20shot%20composition%2C%20dark%20studio%20environment%20with%20orange%20accent%20lighting%2C%20artistic%20filmmaking%20process&width=600&height=400&seq=2&orientation=landscape" alt="Video Production" class="rounded-lg shadow-2xl object-cover w-full max-w-lg">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold mb-4 playfair">About <span class="text-primary">Tanjerin Media</span></h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-10 md:mb-0">
+<img src="https://readdy.ai/api/search-image?query=creative%20media%20agency%20office%20with%20modern%20equipment%2C%20team%20collaboration%20space%2C%20editing%20suite%20with%20multiple%20screens%2C%20professional%20environment%20with%20orange%20brand%20accents%2C%20artistic%20workspace%20with%20video%20production%20tools&width=600&height=400&seq=3&orientation=landscape" alt="About Tanjerin Media" class="rounded-lg shadow-2xl">
+</div>
+<div class="md:w-1/2 md:pl-12">
+<h3 class="text-2xl font-bold mb-6 text-primary">Tanjerin Legacy</h3>
+<p class="text-gray-300 mb-6">
+Tanjerin Media began as a vision shared by a group of passionate creatives determined to elevate brand communication through the power of visual storytelling. With roots in filmmaking and digital strategy, the team set out to reimagine how businesses engage with modern audiences.
+</p>
+<p class="text-gray-300 mb-6">
+  We are a full scale into a full-service creative agency, offering expert solutions in 
+  <span class="text-[#FFA500] font-semibold italic">Video Production</span>, 
+  <span class="text-[#FFA500] font-semibold italic">Graphic Designing</span>, 
+  <span class="text-[#FFA500] font-semibold italic">Website Development</span>, and 
+  <span class="text-[#FFA500] font-semibold italic">Strategic Digital Marketing</span>. 
+  At the heart of everything we do is a commitment to delivering impactful narratives that drive connection, creativity, and measurable growth.
+</p>
+
+<div class="grid grid-cols-2 gap-6 mt-10">
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-movie-2-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Our Mission</h4>
+<p class="text-gray-400">Elevating Brands Through Story, Design, and Digital Precision.
+→ Elegant and concise, ideal for luxury creative services.</p>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-eye-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Our Vision</h4>
+<p class="text-gray-400">To be a premier creative agency recognized for delivering visually compelling solutions and driving impactful, measurable results for our clients.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20">
+<h3 class="text-2xl font-bold mb-10 text-center playfair">Our Core Values</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-palette-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Creativity</h4>
+<p class="text-gray-400">Pushing boundaries with innovative ideas</p>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-focus-2-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Clarity</h4>
+<p class="text-gray-400">Clear communication in every message</p>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-award-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Quality</h4>
+<p class="text-gray-400">Excellence in every project we deliver</p>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-ruler-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Precision</h4>
+<p class="text-gray-400">Attention to detail in every frame</p>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 mx-auto bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-lightbulb-line text-primary text-2xl"></i>
+</div>
+<h4 class="text-xl font-bold mb-2">Innovation</h4>
+<p class="text-gray-400">Embracing new technologies and methods</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gradient-to-b from-black to-gray-900">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold mb-4 playfair">Our <span class="text-primary">Services</span></h2>
+<p class="text-gray-300 max-w-2xl mx-auto">Comprehensive creative solutions tailored to elevate your brand's visual presence and digital strategy.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
+</div>
+<!-- Service Categories -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Video Production -->
+<div class="service-card bg-black bg-opacity-60 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20film%20production%20set%20with%20camera%20crew%2C%20cinematic%20lighting%20setup%2C%20dark%20studio%20environment%20with%20orange%20accent%20lights%2C%20high-end%20filmmaking%20equipment%2C%20creative%20video%20production%20process&width=600&height=400&seq=8&orientation=landscape" alt="Video Production" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 service-icon">
+<i class="ri-movie-line text-primary text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Video Production</h3>
+<p class="text-gray-400 mb-6">Create cinematic, brand-driven video content tailored to various platforms and audiences.</p>
+<a href="#video-production-services" class="text-primary flex items-center text-sm font-medium hover:underline">
+Learn More <i class="ri-arrow-right-line ml-2"></i>
+</a>
+
+</div>
+</div>
+<!-- Video Editing -->
+<div class="service-card bg-black bg-opacity-60 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20video%20editing%20suite%20with%20multiple%20screens%2C%20post-production%20workspace%2C%20color%20grading%20process%2C%20dark%20studio%20environment%20with%20orange%20accent%20lighting%2C%20high-end%20editing%20equipment&width=600&height=400&seq=9&orientation=landscape" alt="Video Editing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 service-icon">
+<i class="ri-film-line text-primary text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Video Editing</h3>
+<p class="text-gray-400 mb-6">Crafted post-production services to elevate raw footage into powerful content.</p>
+<a href="#video-editing-services" class="text-primary flex items-center text-sm font-medium hover:underline">
+  Learn More <i class="ri-arrow-right-line ml-2"></i>
+</a>
+
+</div>
+</div>
+<!-- Digital Marketing -->
+<div class="service-card bg-black bg-opacity-60 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=digital%20marketing%20workspace%20with%20analytics%20dashboards%2C%20SEO%20strategy%20planning%2C%20social%20media%20content%20creation%2C%20dark%20modern%20office%20with%20orange%20accent%20lighting%2C%20professional%20marketing%20environment&width=600&height=400&seq=10&orientation=landscape" alt="Digital Marketing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 service-icon">
+<i class="ri-global-line text-primary text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Digital Marketing</h3>
+<p class="text-gray-400 mb-6">Drive brand growth through integrated marketing strategies and digital solutions.</p>
+<a href="#digital-marketing-services" class="text-primary flex items-center text-sm font-medium hover:underline">
+  Learn More <i class="ri-arrow-right-line ml-2"></i>
+</a>
+
+</div>
+</div>
+<!-- Graphic Desigining -->
+<div class="service-card bg-black bg-opacity-60 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+<div class="h-48 overflow-hidden">
+<img src="https://i0.wp.com/www.admecindia.co.in/wp-content/uploads/2024/10/why-graphic-design-about-creativity-not-just-tools-1.jpg?resize=1536%2C854&ssl=1" alt="Video Production" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 service-icon">
+<i class="ri-movie-line text-primary text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Graphic Desigining</h3>
+<p class="text-gray-400 mb-6">blend creativity with strategy to craft visually engaging designs that communicate your brand’s message effectively.</p>
+<a href="#graphic-designing-services" class="text-primary flex items-center text-sm font-medium hover:underline">
+  Learn More <i class="ri-arrow-right-line ml-2"></i>
+</a>
+
+</div>
+</div>
+
+
+<!-- Website development -->
+<div class="service-card bg-black bg-opacity-60 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+<div class="h-48 overflow-hidden">
+<img src="https://logic2020.com/wp-content/uploads/2024/04/code-faster-in-the-cloud-with-generative-AI-banner.png" alt="Video Editing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 service-icon">
+<i class="ri-film-line text-primary text-xl"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Website Development</h3>
+<p class="text-gray-400 mb-6">We specialize in developing cutting-edge websites, mobile applications, and AI-driven software solutions tailored to business objectives.</p>
+<a href="#website-development-services" class="text-primary flex items-center text-sm font-medium hover:underline">
+  Learn More <i class="ri-arrow-right-line ml-2"></i>
+</a>
+
+</div>
+</div>
+</div>
+<!-- Detailed Services -->
+<div id="video-production-services" class="bg-black bg-opacity-60 rounded-lg p-8 border border-gray-800">
+
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-6 flex items-center">
+<i class="ri-movie-line text-primary mr-3"></i> Video Production Services
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Ad Film Shoots</h4>
+<p class="text-gray-400 text-sm">Professional commercials for TV, social media, and web platforms.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Product Videos</h4>
+<p class="text-gray-400 text-sm">Showcase features, usage, and brand value of products.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Corporate Videos</h4>
+<p class="text-gray-400 text-sm">Brand profiles, interviews, presentations, and internal communications.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Event Coverage</h4>
+<p class="text-gray-400 text-sm">Live event videography for seminars, launches, concerts, and more.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Architectural Videos</h4>
+<p class="text-gray-400 text-sm">Stunning property showcases, virtual tours, and architectural storytelling.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Automobile Videos</h4>
+<p class="text-gray-400 text-sm">Dynamic vehicle showcases, test drives, and automotive brand content.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Explainer Videos</h4>
+<p class="text-gray-400 text-sm">Animated or live-action videos to simplify complex topics.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Music Videos</h4>
+<p class="text-gray-400 text-sm">High-production videos for music artists and brands.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Documentary/BTS</h4>
+<p class="text-gray-400 text-sm">Behind-the-scenes storytelling and company documentaries.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Drone Videography</h4>
+<p class="text-gray-400 text-sm">Cinematic aerial footage for real estate, events, or branding.</p>
+</div>
+</div>
+</div>
+<div id="video-editing-services" class="mb-8">
+
+<h3 class="text-2xl font-bold mb-6 flex items-center">
+<i class="ri-film-line text-primary mr-3"></i> Video Editing Services
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Basic Editing</h4>
+<p class="text-gray-400 text-sm">Cutting, trimming, adding transitions and music.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Cinematic Editing</h4>
+<p class="text-gray-400 text-sm">Story-driven sequences with pacing and structure.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Color Grading</h4>
+<p class="text-gray-400 text-sm">Enhance mood, tone, and color palette of your footage.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Motion Graphics</h4>
+<p class="text-gray-400 text-sm">Dynamic effects, 2D/3D animation overlays.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Reels & Shorts</h4>
+<p class="text-gray-400 text-sm">Vertical format videos for Instagram, YouTube Shorts, and TikTok.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Subtitling & Captions</h4>
+<p class="text-gray-400 text-sm">Accessibility and global audience targeting.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Multi-cam Editing</h4>
+<p class="text-gray-400 text-sm">Combine footage from different angles for a seamless experience.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">CGI Videos</h4>
+<p class="text-gray-400 text-sm">High-quality 3D animations and visual effects for immersive experiences.</p>
+</div>
+</div>
+</div>
+<div id="digital-marketing-services">
+
+<h3 class="text-2xl font-bold mb-6 flex items-center">
+<i class="ri-global-line text-primary mr-3"></i> Digital Marketing Services
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">SEO</h4>
+<p class="text-gray-400 text-sm">On-page, technical, and local SEO strategies.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Content Creation</h4>
+<p class="text-gray-400 text-sm">Copywriting, blog content, video scripts, and social content.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Branding & Identity</h4>
+<p class="text-gray-400 text-sm">Logo design, typography, brand voice, and visual guidelines.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Social Media</h4>
+<p class="text-gray-400 text-sm">Calendar planning, post design, analytics, and engagement.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Performance Marketing</h4>
+<p class="text-gray-400 text-sm">Targeted ad campaigns (Google, Meta, YouTube, LinkedIn).</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Email Marketing</h4>
+<p class="text-gray-400 text-sm">Lead nurturing through automation and newsletter campaigns.</p>
+</div>
+<div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+<h4 class="text-lg font-bold mb-2">Influencer Marketing</h4>
+<p class="text-gray-400 text-sm">Collaborations with creators for organic brand reach.</p>
+</div>
+</div>
+</div>
+
+<!-- Graphic Designing Services -->
+<div id="graphic-designing-services" class="mt-12">
+  <h3 class="text-2xl font-bold mb-6 flex items-center">
+    <i class="ri-brush-line text-primary mr-3"></i> Graphic Designing Services
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">AI-Powered Design</h4>
+      <p class="text-gray-400 text-sm">Use of AI tools for faster mockups, smart layouts, and automated scaling.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Logo & Identity Design</h4>
+      <p class="text-gray-400 text-sm">Unique logos, brand marks, and visual systems that represent your brand.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Marketing Collaterals</h4>
+      <p class="text-gray-400 text-sm">Brochures, flyers, posters, and business cards with creative impact.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Social Media Graphics</h4>
+      <p class="text-gray-400 text-sm">Visually engaging posts, stories, carousels, and banner designs.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Website & UI Graphics</h4>
+      <p class="text-gray-400 text-sm">Custom illustrations, web assets, icons, and UI visuals for digital products.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Infographics</h4>
+      <p class="text-gray-400 text-sm">Data-driven visuals that simplify complex information effectively.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Packaging Design</h4>
+      <p class="text-gray-400 text-sm">Creative and functional product packaging for strong shelf presence.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Presentation Design</h4>
+      <p class="text-gray-400 text-sm">Beautifully crafted pitch decks and corporate presentations.</p>
+    </div>
+
+  </div>
+</div>
+   
+<!-- Website Development Services -->
+<div id="website-development-services" class="mt-12">
+  <h3 class="text-2xl font-bold mb-6 flex items-center">
+    <i class="ri-code-line text-primary mr-3"></i> Website Development Services
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">AI-Powered Websites</h4>
+      <p class="text-gray-400 text-sm">Smart websites that adapt content, personalize experiences, and optimize performance using AI.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Custom Web Apps</h4>
+      <p class="text-gray-400 text-sm">Scalable web applications for businesses, portals, dashboards, and more.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Mobile App Development</h4>
+      <p class="text-gray-400 text-sm">Cross-platform iOS and Android apps with modern UI and robust backend.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">E-commerce Solutions</h4>
+      <p class="text-gray-400 text-sm">Custom or CMS-based online stores with payment gateway integration and user-friendly design.</p>
+    </div>
+
+  
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">UI/UX Design</h4>
+      <p class="text-gray-400 text-sm">User-first design systems with wireframing, prototyping, and interaction design.</p>
+    </div>
+
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">API Development</h4>
+      <p class="text-gray-400 text-sm">RESTful and GraphQL API development for mobile and web integration.</p>
+    </div>
+    
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+  <h4 class="text-lg font-bold mb-2">Coding Websites</h4>
+  <p class="text-gray-400 text-sm">
+    We craft fully coded websites from scratch using HTML, CSS, JavaScript, and modern frameworks.
+  </p>
+</div>
+ 
+    
+    <div class="p-5 bg-gray-900 bg-opacity-50 rounded-lg">
+      <h4 class="text-lg font-bold mb-2">Website Maintenance</h4>
+      <p class="text-gray-400 text-sm">Ongoing support, updates, backups, and performance optimization.</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold mb-4 playfair">Let's <span class="text-primary">Create</span> Something Amazing Together</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">Ready to transform your brand's visual story? Get in touch with our team.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/2 bg-gray-900 bg-opacity-50 p-8 rounded-lg">
+<h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+<form action="mailto:tanjerinmedia@gmail.com" method="POST" enctype="text/plain">
+  <div class="mb-6">
+    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+    <input type="text" id="name" name="Full Name" class="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Your name">
+  </div>
+  <div class="mb-6">
+    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+    <input type="email" id="email" name="Email" class="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Your email">
+  </div>
+  <div class="mb-6">
+    <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+    <input type="text" id="subject" name="Subject" class="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-primary text-sm" placeholder="What is this regarding?">
+  </div>
+  <div class="mb-6">
+    <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+    <textarea id="message" name="Message" rows="5" class="w-full px-4 py-3 rounded border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Tell us about your project..."></textarea>
+  </div>
+  <div class="mb-6">
+    <label class="custom-checkbox">
+      <input type="checkbox" name="Consent">
+      <span class="checkmark"></span>
+      <span class="ml-2 text-sm text-gray-300">I agree to receive communications from Tanjerin Media</span>
+    </label>
+  </div>
+  <button type="submit" class="w-full bg-primary text-black py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+    Send Message
+  </button>
+</form>
+
+</div>
+<div class="md:w-1/2">
+<div class="bg-gray-900 bg-opacity-50 p-8 rounded-lg mb-8">
+<h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4 mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Our Location</h4>
+<p class="text-gray-300">Trivandrum, Kerala, India</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4 mt-1">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Email Us</h4>
+<p class="text-gray-300">
+  <a href="mailto:tanjerinmedia@gmail.com" class="text-gray-300 hover:text-white hover:underline">
+    tanjerinmedia@gmail.com
+  </a>
+</p>
+
+
+
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4 mt-1">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Call Us</h4>
+<p class="text-gray-300">
+  <a href="tel:+918129104333" class="hover:underline">+91 8129104333</a>
+</p>
+<p class="text-gray-300">
+  <a href="tel:+919037948366" class="hover:underline">+91 9037948366</a>
+</p>
+
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4 mt-1">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Working Hours</h4>
+<p class="text-gray-300">Monday - Friday: 9:30 AM - 6:30 PM</p>
+<p class="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-900 bg-opacity-50 p-8 rounded-lg">
+<h3 class="text-2xl font-bold mb-6">Connect With Us</h3>
+<div class="flex space-x-4">
+  <a href="https://www.instagram.com/tanjerinmedia?igsh=MWFmYjVxMmIydWliaw==" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black flex items-center justify-center social-icon">
+    <i class="ri-instagram-line text-xl text-white"></i>
+  </a>
+<a href="https://www.youtube.com/@TanjerinMedia" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black flex items-center justify-center social-icon">
+  <i class="ri-youtube-fill text-xl text-white"></i>
+</a>
+
+<a href="https://www.facebook.com/share/19Xpoe3Ts2/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black flex items-center justify-center social-icon">
+  <i class="ri-facebook-fill text-xl text-white"></i>
+</a>
+
+<a href="https://www.linkedin.com/company/tanjerin/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black flex items-center justify-center social-icon">
+  <i class="ri-linkedin-fill text-xl text-white"></i>
+</a>
+
+<a href="https://x.com/TanjerinMedia" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-black flex items-center justify-center social-icon">
+  <i class="ri-twitter-x-fill text-xl text-white"></i>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black pt-16 pb-8 border-t border-gray-800">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div>
+<div class="mb-6 flex justify-center">
+  <img src="imagetnmdea/logo.png" alt="Tanjerin Logo" class="h-24.5">
+</div>
+
+
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition-colors">Our Services</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Our Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Video Production</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Video Editing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Digital Marketing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Branding & Identity</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Content Creation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Website Design</a></li>
+</ul>
+</div>
+
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">
+© 2025 Tanjerin Media Pvt. Ltd. All rights reserved.
+</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky Navigation
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+nav.classList.add('bg-black');
+nav.classList.remove('bg-gradient-to-b', 'from-black', 'to-transparent');
+} else {
+nav.classList.remove('bg-black');
+nav.classList.add('bg-gradient-to-b', 'from-black', 'to-transparent');
+}
+});
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 100,
+behavior: 'smooth'
+});
+// Update active nav link
+document.querySelectorAll('.nav-link').forEach(link => {
+link.classList.remove('active');
+});
+this.classList.add('active');
+}
+});
+});
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', function() {
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 200;
+const sectionHeight = section.offsetHeight;
+if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+current = section.getAttribute('id');
+}
+});
+document.querySelectorAll('.nav-link').forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('active');
+}
+});
+});
+});
+</script>
+<!-- Service Modal -->
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-gray-900 rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto mx-4 relative">
+<button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+<i class="ri-close-line text-2xl"></i>
+</button>
+<div class="p-8">
+<h2 id="modalTitle" class="text-3xl font-bold mb-6 text-white playfair"></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4 text-white">Service Description</h3>
+<p id="modalDescription" class="text-gray-300 mb-6"></p>
+<div class="space-y-4">
+<h3 class="text-xl font-bold mb-4 text-white">What's Included</h3>
+<ul id="modalFeatures" class="space-y-3 text-gray-300">
+</ul>
+</div>
+</div>
+<div>
+<div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6">
+<h3 class="text-xl font-bold mb-4 text-white">Pricing Options</h3>
+<div id="modalPricing" class="space-y-4">
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4 text-white">Portfolio Examples</h3>
+<div id="modalPortfolio" class="grid grid-cols-2 gap-4">
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="bg-primary text-black px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+Request Quote
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+const serviceData = {
+'video-production': {
+title: 'Video Production Services',
+description: 'Professional video production services tailored to elevate your brand's visual storytelling. We combine creative direction, technical expertise, and industry-leading equipment to deliver compelling content that resonates with your audience.',
+features: [
+'Pre-production planning and creative direction',
+'Professional filming with high-end equipment',
+'Expert lighting and sound recording',
+'Location scouting and management',
+'Talent casting and direction',
+'Post-production coordination',
+'Specialized architectural videography',
+'Dynamic automotive cinematography'
+],
+pricing: [
+{
+name: 'Basic Package',
+price: '₹75,000',
+features: ['Half-day shoot', 'Basic editing', '1 revision', 'HD delivery']
+},
+{
+name: 'Professional Package',
+price: '₹1,50,000',
+features: ['Full-day shoot', 'Advanced editing', '3 revisions', '4K delivery']
+},
+{
+name: 'Premium Package',
+price: 'Custom',
+features: ['Multiple day shoots', 'Premium editing', 'Unlimited revisions', 'Multiple delivery formats']
+}
+],
+portfolio: [
+{
+image: 'https://readdy.ai/api/search-image?query=professional%20commercial%20video%20production%20scene%20with%20dramatic%20lighting%20and%20high%20end%20camera%20equipment%2C%20cinematic%20look&width=300&height=200&seq=101&orientation=landscape',
+title: 'Brand Commercial'
+},
+{
+image: 'https://readdy.ai/api/search-image?query=corporate%20interview%20setup%20with%20professional%20lighting%20and%20multiple%20cameras%2C%20modern%20office%20environment&width=300&height=200&seq=102&orientation=landscape',
+title: 'Corporate Interview'
+},
+{
+image: 'https://readdy.ai/api/search-image?query=modern%20luxury%20architectural%20photography%20with%20dramatic%20lighting%2C%20stunning%20modern%20building%20exterior%20at%20golden%20hour%2C%20professional%20real%20estate%20videography&width=300&height=200&seq=103&orientation=landscape',
+title: 'Architectural Showcase'
+},
+{
+image: 'https://readdy.ai/api/search-image?query=luxury%20sports%20car%20video%20production%2C%20dramatic%20automotive%20photography%2C%20professional%20car%20commercial%20shoot%20with%20dynamic%20lighting&width=300&height=200&seq=104&orientation=landscape',
+title: 'Automotive Commercial'
+}
+]
+}
+};
+document.addEventListener('DOMContentLoaded', function() {
+const modal = document.getElementById('serviceModal');
+const closeModal = document.getElementById('closeModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalPricing = document.getElementById('modalPricing');
+const modalPortfolio = document.getElementById('modalPortfolio');
+document.querySelectorAll('.learn-more-btn').forEach(button => {
+button.addEventListener('click', () => {
+const serviceType = button.dataset.service;
+const data = serviceData[serviceType];
+modalTitle.textContent = data.title;
+modalDescription.textContent = data.description;
+modalFeatures.innerHTML = data.features.map(feature =>
+`<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>${feature}</span>
+</li>`
+).join('');
+modalPricing.innerHTML = data.pricing.map(package =>
+`<div class="bg-gray-800 rounded-lg p-4">
+<h4 class="font-bold text-white mb-2">${package.name}</h4>
+<p class="text-primary font-bold mb-2">${package.price}</p>
+<ul class="text-sm text-gray-300">
+${package.features.map(feature =>
+`<li class="flex items-center mb-1">
+<i class="ri-check-line text-primary mr-2"></i>
+${feature}
+</li>`
+).join('')}
+</ul>
+</div>`
+).join('');
+modalPortfolio.innerHTML = data.portfolio.map(item =>
+`<div class="rounded-lg overflow-hidden">
+<img src="${item.image}" alt="${item.title}" class="w-full h-32 object-cover">
+<p class="text-sm text-gray-300 mt-2">${item.title}</p>
+</div>`
+).join('');
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+});
+closeModal.addEventListener('click', () => {
+modal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+});
+modal.addEventListener('click', (e) => {
+if (e.target === modal) {
+modal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+});
+});
+</script>
+
+
+
+<script>
+  const toggleButton = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
